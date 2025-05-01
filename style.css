@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.6;
@@ -17,9 +21,12 @@ header {
 nav {
   background: #444;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 1em;
   padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
@@ -40,4 +47,32 @@ footer {
   text-align: center;
   padding: 1em;
   background: #ddd;
+}
+
+.social-buttons {
+  margin-top: 1em;
+}
+
+.button {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 0.5em 1.2em;
+  margin-right: 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.button.github {
+  background-color: #333;
+}
+
+.button.linkedin {
+  background-color: #0077b5;
 }
